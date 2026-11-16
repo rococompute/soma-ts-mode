@@ -39,11 +39,15 @@ It needs Emacs 29.1 or later.
 ```elisp
 ;; Emacs 30
 (use-package soma-ts-mode
-  :vc (:url "git@github.com:rococompute/soma-ts-mode.git"))
+  :vc (:url "https://github.com/rococompute/soma-ts-mode"))
 
 ;; Emacs 29
-(package-vc-install "git@github.com:rococompute/soma-ts-mode.git")
+(package-vc-install "https://github.com/rococompute/soma-ts-mode")
 ```
+
+`package-vc-install` tells git from the URL only for `https://` addresses
+it knows. For an SSH address, name the backend:
+`(package-vc-install "git@github.com:rococompute/soma-ts-mode.git" nil 'Git)`.
 
 Then, once, `M-x soma-ts-mode-install-grammar`. It clones
 `soma-ts-mode-grammar-url` (tree-sitter-soma) at
