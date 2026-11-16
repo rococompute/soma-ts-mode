@@ -2,7 +2,7 @@
 # make grammar   build the Soma grammar into .grammar/ (from
 #                ../tree-sitter-soma when it is there, else a clone)
 EMACS ?= $(shell command -v emacs || echo /Applications/Emacs.app/Contents/MacOS/Emacs)
-GRAMMAR_URL ?= git@github.com:rococompute/tree-sitter-soma.git
+GRAMMAR_URL ?= https://github.com/rococompute/tree-sitter-soma
 EXT = $(if $(filter Darwin,$(shell uname)),dylib,so)
 LIB = .grammar/libtree-sitter-soma.$(EXT)
 

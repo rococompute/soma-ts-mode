@@ -52,9 +52,7 @@ it knows. For an SSH address, name the backend:
 Then, once, `M-x soma-ts-mode-install-grammar`. It clones
 `soma-ts-mode-grammar-url` (tree-sitter-soma) at
 `soma-ts-mode-grammar-revision` (`main`) and compiles it into
-`~/.emacs.d/tree-sitter/`, with git and a C compiler. The repository is
-private for now, so git has to be able to read it: an SSH key on GitHub,
-or `gh auth setup-git` for HTTPS. Without the grammar the mode still
+`~/.emacs.d/tree-sitter/`, with git and a C compiler. Without the grammar the mode still
 handles comments, but has no highlighting or indentation, and says how to
 install it.
 

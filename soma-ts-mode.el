@@ -81,8 +81,7 @@ With 4, the body lines up after \"| \"; Soma's own examples use 2."
 
 (defcustom soma-ts-mode-grammar-url "https://github.com/rococompute/tree-sitter-soma"
   "Where `soma-ts-mode-install-grammar' clones the grammar from.
-While the repository is private, give an address git can authenticate to,
-such as \"git@github.com:rococompute/tree-sitter-soma.git\"."
+Any address git can clone works, such as a fork or a local checkout."
   :type 'string)
 
 (defcustom soma-ts-mode-grammar-revision "main"
