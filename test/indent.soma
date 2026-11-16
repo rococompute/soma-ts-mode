@@ -1,0 +1,55 @@
+(** A doc comment
+    over two lines. *)
+Require Import Sandbox.
+
+(* a comment *)
+square (x : N) : N := x * x.
+
+main : io unit :=
+  a <- args ;;
+  match a with
+  | [address] =>
+      print ("connecting to " ++ address) ;;
+      link <- connect address 7000 ;;
+      match link with
+      | Connected c => talk c
+      | ConnectRefused => exit 1
+      end
+  | _ => print "usage: --arg=ADDRESS" ;; exit 2
+  end.
+
+Inductive resolved : Type :=
+| Resolved (address : string)
+| Unresolved (why : string).
+
+Lemma step_within_limit : forall action count,
+  count <= limit -> step action count <= limit.
+Proof.
+  Take a : action.
+  Take count : nat.
+  We consider each case of a.
+  - We need to show that (if count <? limit then count + 1 else count) <= limit.
+    We consider whether count < limit as room.
+    + We conclude that count + 1 <= limit.
+    + We conclude that count <= limit.
+  - We conclude that count - 1 <= limit.
+  - rewrite IH.
+    2:{
+      reflexivity.
+    }
+    {
+      lia.
+    }
+Qed.
+
+basename (s : string) : string :=
+  if seq s "" then "." else
+  match drop_slashes (List.rev (chars s)) with
+  | [] => "/"
+  | r =>
+      if key_word r then
+        r
+      else (if looks_secret r then redacted else r)
+  end.
+
+Example e : 1 + 1 = 2 := eq_refl.
