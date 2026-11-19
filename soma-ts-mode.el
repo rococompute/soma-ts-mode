@@ -84,8 +84,10 @@ With 4, the body lines up after \"| \"; Soma's own examples use 2."
 Any address git can clone works, such as a fork or a local checkout."
   :type 'string)
 
-(defcustom soma-ts-mode-grammar-revision "main"
-  "The grammar's branch or tag that `soma-ts-mode-install-grammar' installs."
+(defcustom soma-ts-mode-grammar-revision "dda2a558eacc6bc5cb8a387c49bce91a75b61234"
+  "The grammar revision that `soma-ts-mode-install-grammar' installs.
+The default pins the grammar tested with this mode.  Set this to a different
+commit, tag or branch explicitly when testing a grammar update."
   :type 'string)
 
 ;;; Words

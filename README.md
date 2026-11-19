@@ -51,7 +51,7 @@ it knows. For an SSH address, name the backend:
 
 Then, once, `M-x soma-ts-mode-install-grammar`. It clones
 `soma-ts-mode-grammar-url` (tree-sitter-soma) at
-`soma-ts-mode-grammar-revision` (`main`) and compiles it into
+`soma-ts-mode-grammar-revision` (the pinned commit tested with this mode) and compiles it into
 `~/.emacs.d/tree-sitter/`, with git and a C compiler. Without the grammar the mode still
 handles comments, but has no highlighting or indentation, and says how to
 install it.
@@ -69,7 +69,7 @@ The mode opens `.soma`, `.exp` and `.ext` files. For Rocq's `.v` files too:
 | `soma-ts-mode-indent-offset` | 2 | a step of indentation |
 | `soma-ts-mode-branch-offset` | 4 | how far a match branch's body is past its `\|` on the lines after `\| pattern =>` |
 | `soma-ts-mode-grammar-url` | the GitHub repository | where the grammar is cloned from |
-| `soma-ts-mode-grammar-revision` | `main` | the grammar's branch or tag |
+| `soma-ts-mode-grammar-revision` | `dda2a558eacc6bc5cb8a387c49bce91a75b61234` | the tested grammar commit; explicitly override to test another revision |
 
 pantheon indents branch bodies by 4, and Soma's own examples by 2. For a
 repository in the second style, add this `.dir-locals.el`:
