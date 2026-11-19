@@ -82,8 +82,8 @@ repository in the second style, add this `.dir-locals.el`:
 
 ```sh
 make test      # byte-compile with warnings as errors, then the ERT tests
-make grammar   # just the grammar, into .grammar/ (from ../tree-sitter-soma
-               # when it's beside this repository, else a clone)
+make grammar   # fetch the pinned grammar and build it into .grammar/
+make test GRAMMAR_URL=../tree-sitter-soma # use a local source for the pinned revision
 ```
 
 The tests cover:

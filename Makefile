@@ -1,6 +1,5 @@
 # make test      byte-compile without warnings, then run the tests
-# make grammar   build the Soma grammar into .grammar/ (from
-#                ../tree-sitter-soma when it is there, else a clone)
+# make grammar   fetch GRAMMAR_REV from GRAMMAR_URL and build into .grammar/
 EMACS ?= $(shell command -v emacs || echo /Applications/Emacs.app/Contents/MacOS/Emacs)
 GRAMMAR_URL ?= https://github.com/rococompute/tree-sitter-soma
 GRAMMAR_REV ?= dda2a558eacc6bc5cb8a387c49bce91a75b61234
